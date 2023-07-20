@@ -1,0 +1,86 @@
+.black{
+    background-color: #fff;
+
+    transition: .3s ease-in-out;
+}
+
+.black .calculator{
+    box-shadow: 0px 0px 10px 2px #000;
+    background-color: #585858;
+}
+
+
+/* Header */
+
+.black .burger_line{
+    background-color: #000;
+}
+
+.black .store_wrapper{
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.black .store_item{
+    color: #000;
+}
+
+.black .theme_img{
+   filter: none;
+}
+
+/* Area */
+
+.black .area_input{
+    color: #fff;
+}
+
+.black .last_history{    
+    color: #d8d8d8a9;
+}
+
+/* Keyboard */
+
+.black .operator .key_wrapper{
+    background-color: #fff;
+}
+
+.black .operator .key_btn{
+    color: rgb(255, 0, 0);
+}
+
+.black .number .key_wrapper:hover{
+    box-shadow: 0px 0px 10px -1px #fff;    
+}
+
+.black .number .key_wrapper:active{
+    background-color: #fff;
+}
+
+.black .number .key_wrapper:active .key_btn{
+    color: #000;
+}
+
+.black .number .key_btn {
+    color: #fff;
+
+    transition: .3s ease-in-out;
+}
+
+.black .delete .key_wrapper{
+    background-color: gray;
+
+    transition: .3s ease-in-out;
+}
+
+.black .delete .key_wrapper:hover{
+    background-color: rgb(206, 206, 206);
+}
+
+.black .delete .key_btn{
+    color: #fff;
+}
+
+.black .key_btn{
+    color: #fff;
+}

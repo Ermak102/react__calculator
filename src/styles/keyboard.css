@@ -1,0 +1,74 @@
+.operator .key_wrapper{
+    cursor: pointer;    
+
+    transition: .3s ease-in-out;
+}
+
+.operator .key_wrapper:hover {
+    background-color: #ff9400;
+}
+
+.number .key_wrapper{
+    background-color: transparent;
+    cursor: pointer;    
+
+    transition: .3s ease-in-out;
+}
+
+.number .key_wrapper:hover{    
+    transition: .6s ease-in-out;
+}
+
+.keyboard{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.key{
+    width: 24%;
+    margin: 1rem 0rem;
+
+    text-align: center;
+}
+
+.img_wrapper{
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.key_img{
+    width: 100%;
+    height: auto;
+}
+
+.key_wrapper{
+    border-radius: 50%;
+    width: 64px;
+
+    margin: 0 auto;
+}
+
+.key_btn{
+    font-size: 1.4rem;
+    padding: 1rem;
+
+    background: transparent;
+    border-radius: 50%;
+
+    text-align: center;
+
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+}

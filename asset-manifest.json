@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ermak102/react__calculator/static/css/main.faee75ab.css",
+    "main.js": "/Ermak102/react__calculator/static/js/main.b3cbf57d.js",
+    "index.html": "/Ermak102/react__calculator/index.html",
+    "main.faee75ab.css.map": "/Ermak102/react__calculator/static/css/main.faee75ab.css.map",
+    "main.b3cbf57d.js.map": "/Ermak102/react__calculator/static/js/main.b3cbf57d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faee75ab.css",
+    "static/js/main.b3cbf57d.js"
+  ]
+}

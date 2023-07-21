@@ -26,6 +26,7 @@ const Keyboard: FC<Props> = ({ value, setValue, setHistory }) => {
   const historyCalculate = () => {
     if (value.split("").pop() === "=") {
       const calc = eval(value.slice(0, -1)).toString();
+
       setValue(calc);
       saveHistoryToStore(`${value}${calc}`);
       return;

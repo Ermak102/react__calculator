@@ -9,8 +9,16 @@ interface Props {
 }
 
 const Area: FC<Props> = ({ value, setValue, history }) => {
-  const [textSize, setTextSize] = useState(1.5);
-  const [sizeRatio, setSizeRation] = useState(1.25);
+  const defaultSize = 1.5;
+  const defaultRatio = 1.2;
+
+  const defaultMaxSizeInput = 20;
+
+  const [textSize, setTextSize] = useState(defaultSize);
+
+  useEffect(() => {
+    sizeController(defaultMaxSizeInput);
+  }, [value]);
 
   const changeValue = (currentValue: string) => {
     const checkStr = /[0-9]|[\+\%\-\*\=\/]/;
@@ -23,12 +31,20 @@ const Area: FC<Props> = ({ value, setValue, history }) => {
   };
 
   const sizeController = (size: number) => {
-    if (sizeRatio > 3) return;
+    if (value.length > (size / textSize) * defaultSize) {
+      setTextSize(textSize / defaultRatio);
+    }
 
-    if (size * sizeRatio > value.length) return;
+    if (
+      value.length * defaultRatio < (size / textSize) * defaultSize &&
+      value.length * defaultRatio > size
+    ) {
+      setTextSize(textSize * defaultRatio);
+    }
 
-    setTextSize(textSize / 1.2);
-    setSizeRation(sizeRatio * 1.2);
+    if (value.length === 0 || value.length < defaultMaxSizeInput) {
+      setTextSize(defaultSize);
+    }
   };
 
   return (
@@ -46,7 +62,6 @@ const Area: FC<Props> = ({ value, setValue, history }) => {
           value={value}
           placeholder="0"
           onChange={(e) => changeValue(e.currentTarget.value)}
-          onInput={(e) => sizeController(e.currentTarget.size)}
           style={{ fontSize: `${textSize}rem` }}
         />
       </div>
